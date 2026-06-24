@@ -1,0 +1,6 @@
+{
+  "name": "GRT WiFi",
+  "description": "An Android application to scan visible Wi-Fi networks and share your own local hotspot easily.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
