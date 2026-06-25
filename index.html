@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyAPK Minecraft Downloader</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #17212b;
+            color: #f5f6f7;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 { color: #5288c1; font-size: 20px; }
+        p { color: #7f91a4; font-size: 14px; }
+        .btn {
+            display: inline-block;
+            background-color: #2481cc;
+            color: white;
+            padding: 15px 30px;
+            margin-top: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            width: 80%;
+        }
+        .btn:active { background-color: #1c6ca8; }
+    </style>
+</head>
+<body>
+
+    <h1>🕹️ Последний Minecraft от EasyAPK</h1>
+    <p>Нажми на кнопку ниже, чтобы перейти прямо к скачиванию свежего APK-файла.</p>
+
+    <button class="btn" id="download-btn">СКАЧАТЬ MINECRAFT</button>
+
+    <script>
+        // Инициализируем WebApp
+        const tg = window.Telegram.WebApp;
+        tg.ready(); // Сообщаем Телеграму, что приложение прогрузилось
+        tg.expand(); // Раскрываем мини-приложение на весь экран телефона
+
+        // Навешиваем событие на кнопку
+        document.getElementById('download-btn').addEventListener('click', function() {
+            // Сюда можно вписать либо прямую ссылку, либо диплинк на поиск внутри AyuGram
+            const targetUrl = "tg://resolve?domain=easyapk&query=Minecraft";
+            
+            // Открываем ссылку внутри Telegram
+            tg.openTelegramLink(targetUrl);
+            
+            // Закрываем мини-приложение после клика
+            tg.close();
+        });
+    </script>
+</body>
+</html>
